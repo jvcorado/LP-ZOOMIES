@@ -1,118 +1,60 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import "primereact/resources/themes/lara-light-indigo/theme.css";     
+import "primereact/resources/primereact.min.css";    
+import 'primeicons/primeicons.css';
+import { Button } from "primereact/button"
+import Logo from "../public/Logo Zoomies branca-01.png"
+import Icon from "../public/Ícone.png"
+import { Forms } from '@/components/Forms';
+import { Footer } from '@/components/Footer';
+import { Sidebar } from "primereact/sidebar"
+import { useState } from 'react';
+import { Regulamentacao } from '@/components/Regulamentacao';
 
 export default function Home() {
+
+  const [visible, setVisible] = useState<boolean>(false);
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+
+      <div className="surface-0 text-700 text-center bg-image flex items-center justify-center flex-col gap-4">
+          <Image src={Logo} alt="Logo Zoomies" className='w-28'/>
+          <h1 className="text-white font-bold text-5xl mb-3">Tenha a sua ilustração </h1>
+          <div className="text-white text-2xl mb-5">nas embalagens da marca pet mais inovadora do Brasil!</div>
+      </div>
+      <div className="text-gray-100 p-3 flex justify-center items-center flex-wrap" style={{backgroundColor:'#E32E27'}}>
+          <div className="font-bold mr-4">🔥 Participe Agora!</div>
+          <div className="items-center hidden lg:flex">
+              <span className="line-height-3">Antes de se inscrever no nosso concurso,</span>
+          </div>
+          <div className="card flex justify-content-center">
+            <Sidebar visible={visible} onHide={() => setVisible(false)} fullScreen>
+                <Regulamentacao/>
+            </Sidebar>
+            <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase'>Conheça mais sobre as nossas regras.</p>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className=' flex flex-col lg:flex-row items-center justify-center p-10 lg:p-20 gap-20 lg:gap-0'  style={{backgroundColor:'#FDFBDD'}}>
+        <div className='flex flex-col flex-1 gap-10'>
+          <h1 className='text-2xl lg:text-5xl font-bold text-center' style={{color:'#587ebf'}}>Entenda nosso Concurso</h1>
+          <iframe className='rounded-2xl shadow-2xl h-285 lg:h-570'  src="https://www.youtube.com/embed/9bPGwCpVz_0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        </div>
+        <Forms></Forms>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="surface-0 text-700 text-center flex items-center justify-center flex-col p-10 lg:p-40" style={{backgroundColor:'#F6A824'}}>
+          <Image src={Icon} alt='' width={60} className='mb-4'></Image>
+          <div className="text-white font-bold text-3xl lg:text-5xl mb-3">Para validar sua participação no concurso</div>
+          <div className="text-white text-2xl mb-5"> você também precisa seguir nossas redes sociais:</div>
+          <div className='flex flex-col lg:flex-row gap-5 w-full lg:w-1/4'>
+            <Button label="Seguir" icon="pi pi-instagram" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button label="Seguir" icon="pi pi-youtube" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button label="Seguir" icon="pi pi-facebook" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+          </div>
       </div>
+      <Footer/>
     </main>
   )
 }
+
+
