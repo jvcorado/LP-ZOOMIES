@@ -10,6 +10,8 @@ import { Footer } from '@/components/Footer';
 import { Sidebar } from "primereact/sidebar"
 import { useState } from 'react';
 import { Regulamentacao } from '@/components/Regulamentacao';
+import { BsTiktok } from "react-icons/bs"
+
 
 export default function Home() {
 
@@ -19,9 +21,9 @@ export default function Home() {
     <main>
 
       <div className="surface-0 text-700 text-center bg-image flex items-center justify-center flex-col gap-4">
-          <Image src={Logo} alt="Logo Zoomies" className='w-28'/>
-          <h1 className="text-white font-bold text-5xl mb-3">Tenha a sua ilustração </h1>
-          <div className="text-white text-2xl mb-5">nas embalagens da marca pet mais inovadora do Brasil!</div>
+          <Image src={Logo} alt="Logo Zoomies" className='w-32'/>
+          <h1 className="text-white font-bold text-7xl mb-3">Tenha a sua ilustração </h1>
+          <div className="text-white text-3xl mb-5">nas embalagens da marca pet mais inovadora do Brasil!</div>
       </div>
       <div className="text-gray-100 p-3 flex justify-center items-center flex-wrap" style={{backgroundColor:'#E32E27'}}>
           <div className="font-bold mr-4">🔥 Participe Agora!</div>
@@ -46,10 +48,11 @@ export default function Home() {
           <Image src={Icon} alt='' width={60} className='mb-4'></Image>
           <div className="text-white font-bold text-3xl lg:text-5xl mb-3">Para validar sua participação no concurso</div>
           <div className="text-white text-2xl mb-5"> você também precisa seguir nossas redes sociais:</div>
-          <div className='flex flex-col lg:flex-row gap-5 w-full lg:w-1/4'>
+          <div className='flex flex-col items-center lg:justify-center lg:flex-row gap-5 w-full m-auto'>
             <Button label="Seguir" icon="pi pi-instagram" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
             <Button label="Seguir" icon="pi pi-youtube" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
             <Button label="Seguir" icon="pi pi-facebook" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button label="Seguir" icon="" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"/>
           </div>
       </div>
       <Footer/>
