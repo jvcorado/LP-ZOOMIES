@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import { useRef, MutableRefObject } from 'react';
+
 import { Button } from "primereact/button"
 import { InputText } from "primereact/inputtext"
 import { Checkbox } from "primereact/checkbox"
@@ -11,10 +12,13 @@ import { FileUpload } from 'primereact/fileupload';
 
 export const Forms = () =>{
 
-    const toast = useRef<Toast>(null);
+    const toastRef = useRef<Toast>(null);
 
     const onUpload = () => {
-        toast.current.show({ severity: 'info', summary: 'Success', detail: 'File Uploaded' });
+        if (toastRef.current) {
+            // Lógica para exibir o toast
+            toastRef.current.show({ severity: 'info', summary: 'Success', detail: 'File Uploaded' });
+        }
     };
 
     return(
@@ -50,7 +54,7 @@ export const Forms = () =>{
                             </div>
                         </div>
                         <div className="card flex justify-content-center">
-                            <Toast ref={toast}></Toast>
+                            <Toast ref={toastRef}></Toast>
                             <FileUpload chooseLabel='Anexar ilustração' mode="basic"  name="demo[]" url="/api/upload" accept="image/*" maxFileSize={1000000} onUpload={onUpload} className='w-full flex-1' />
                         </div>
                     </div>
