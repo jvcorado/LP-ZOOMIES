@@ -10,7 +10,7 @@ import { Footer } from '@/components/Footer';
 import { Sidebar } from "primereact/sidebar"
 import { useState } from 'react';
 import { Regulamentacao } from '@/components/Regulamentacao';
-import { BsTiktok } from "react-icons/bs"
+import { FaTiktok } from "react-icons/fa"
 
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
             <Button label="Seguir" icon="pi pi-instagram" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
             <Button label="Seguir" icon="pi pi-youtube" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
             <Button label="Seguir" icon="pi pi-facebook" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
-            <Button label="Seguir" icon="" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"/>
+            <Button label="Seguir" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap flex flex-row-reverse gap-2 "><FaTiktok size={18}/></Button>
           </div>
       </div>
       <Footer/>
