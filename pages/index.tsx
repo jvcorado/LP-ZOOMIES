@@ -37,12 +37,12 @@ export default function Home() {
             <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase'>Conheça mais sobre as nossas regras.</p>
         </div>
       </div>
-      <div className=' flex flex-col lg:flex-row items-center justify-center p-10 lg:p-20 gap-20 lg:gap-0'  style={{backgroundColor:'#FDFBDD'}}>
-        <div className='flex flex-col flex-1 gap-10'>
+      <div className='flex flex-col lg:flex-row items-center justify-center p-3 py-10 lg:p-20 gap-20 lg:gap-8'  style={{backgroundColor:'#FDFBDD'}}>
+        <div className='flex flex-col flex-1 gap-10 w-full h-5/6 '>
           <h1 className='text-2xl lg:text-5xl font-bold text-center' style={{color:'#587ebf'}}>Entenda nosso Concurso</h1>
           <iframe className='rounded-2xl shadow-2xl h-285 lg:h-570'  src="https://www.youtube.com/embed/9bPGwCpVz_0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
-        <Forms></Forms>
+        <Forms/>
       </div>
       <div className="surface-0 text-700 text-center flex items-center justify-center flex-col p-10 lg:p-40" style={{backgroundColor:'#F6A824'}}>
           <Image src={Icon} alt='' width={60} className='mb-4'></Image>
