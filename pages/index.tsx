@@ -60,10 +60,10 @@ export default function Home() {
           <div className="text-white font-bold text-3xl lg:text-5xl mb-3">Para validar sua participação no concurso</div>
           <div className="text-white text-2xl mb-5"> você também precisa seguir nossas redes sociais:</div>
           <div className='flex flex-col items-center md:justify-center md:flex-row gap-5 w-full'>
-            <Button onClick={insta} label="Seguir" icon="pi pi-instagram" className="w-7/12 md:w-1/12  font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
-            <Button  onClick={youtube} label="Seguir" icon="pi pi-youtube" className="w-7/12 md:w-1/12   font-bold px-5 py-3  p-button-rounded white-space-nowrap" />
-            <Button  onClick={facebook} label="Seguir" icon="pi pi-facebook" className="w-7/12 md:w-1/12   font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
-            <Button  onClick={tiktok} label="Seguir" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap flex flex-row-reverse gap-2 w-7/12 md:w-1/12  "><FaTiktok size={18}/></Button>
+            <Button onClick={insta} label="Seguir" icon="pi pi-instagram" className="w-7/12 md:w-2/12  font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button  onClick={youtube} label="Seguir" icon="pi pi-youtube" className="w-7/12 md:w-2/12   font-bold px-5 py-3  p-button-rounded white-space-nowrap" />
+            <Button  onClick={facebook} label="Seguir" icon="pi pi-facebook" className="w-7/12 md:w-2/12   font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button  onClick={tiktok} label="Seguir" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap flex flex-row-reverse gap-2 w-7/12 md:w-2/12  "><FaTiktok size={18}/></Button>
           </div>
       </div>
       <Footer/>
