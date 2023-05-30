@@ -45,7 +45,7 @@ export default function Home() {
             <Sidebar visible={visible} onHide={() => setVisible(false)} fullScreen>
                 <Regulamentacao/>
             </Sidebar>
-            <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase md:text-3xl underline decoration decoration-neutral-800'>Clique aqui e conheça as regrar.</p>
+            <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase md:text-3xl underline decoration-2 decoration-neutral-800'>Clique aqui e conheça as regras.</p>
         </div>
       </div>
       <div className='flex flex-col xl:flex-row items-center justify-center p-3 py-10 md:p-20 gap-20 lg:gap-8'  style={{backgroundColor:'#FDFBDD'}}>
