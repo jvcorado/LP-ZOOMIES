@@ -14,12 +14,17 @@ body{
 
 
 
-.bg-imageMobile{
+.bg-imageMobile {
   background-image: url(../public/Banner_LP_Concurso_Ilustração_Vertical.jpg);
-  background-position: center center;
-  background-size: cover;
-  height: 100vh;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 54vh;
+  max-height: 100%;
+  width: 100vw;
+  max-width: 100%;
 }
+
 
 
 
@@ -32,10 +37,11 @@ body{
   
   .bg-image{
     background-image: url(../public/Banner_LP_Concurso_Ilustração_Horizontal.jpg);
-    background-position: center center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height:100vh;
+    width: 100vw;
+    max-width: 100%;
     display: block;
   }
 }
