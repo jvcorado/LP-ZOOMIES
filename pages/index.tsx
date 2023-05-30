@@ -36,16 +36,16 @@ export default function Home() {
 
       <div className="surface-0 text-700 text-center bg-imageMobile bg-image flex items-center justify-center flex-col gap-4">
       </div>
-      <div className="text-gray-100 p-3 flex justify-center items-center flex-wrap" style={{backgroundColor:'#E32E27'}}>
-          <div className="font-bold mr-4">🔥 Participe Agora!</div>
-          <div className="items-center hidden lg:flex">
-              <span className="line-height-3">Antes de se inscrever no nosso concurso,</span>
+      <div className="text-gray-100 p-3 flex flex-col justify-center items-center flex-wrap " style={{backgroundColor:'#E32E27'}}>
+          <div className="font-bold mr-4 md:text-3xl">🔥 Participe Agora!</div>
+          <div className="items-center md:text-2xl md:flex">
+              <span className="line-height-3 ">Antes de se inscrever no nosso concurso,</span>
           </div>
           <div className="card flex justify-content-center">
             <Sidebar visible={visible} onHide={() => setVisible(false)} fullScreen>
                 <Regulamentacao/>
             </Sidebar>
-            <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase'>Conheça mais sobre as nossas regras.</p>
+            <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase md:text-3xl'>Conheça mais sobre as nossas regras.</p>
         </div>
       </div>
       <div className='flex flex-col xl:flex-row items-center justify-center p-3 py-10 md:p-20 gap-20 lg:gap-8'  style={{backgroundColor:'#FDFBDD'}}>

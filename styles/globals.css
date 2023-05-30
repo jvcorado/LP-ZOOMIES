@@ -17,9 +17,8 @@ body{
 .bg-imageMobile{
   background-image: url(../public/Banner_LP_Concurso_Ilustração_Vertical.jpg);
   background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh
+  height: 100vh;
 }
 
 
