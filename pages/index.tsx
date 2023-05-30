@@ -17,13 +17,24 @@ export default function Home() {
 
   const [visible, setVisible] = useState<boolean>(false);
 
+  function insta(){
+    window.location.href='https://www.instagram.com/zoomiesbr/'
+  }
+
+  function youtube(){
+    window.location.href='https://www.instagram.com/zoomiesbr/'
+  }
+  function facebook(){
+    window.location.href='https://www.instagram.com/zoomiesbr/'
+  }
+  function tiktok(){
+    window.location.href='https://www.instagram.com/zoomiesbr/'
+  }
+
   return (
     <main>
 
-      <div className="surface-0 text-700 text-center bg-image flex items-center justify-center flex-col gap-4">
-          <Image src={Logo} alt="Logo Zoomies" className='w-32'/>
-          <h1 className="text-white font-bold text-7xl mb-3">Tenha a sua ilustração </h1>
-          <div className="text-white text-3xl mb-5">nas embalagens da marca pet mais inovadora do Brasil!</div>
+      <div className="surface-0 text-700 text-center bg-imageMobile bg-image flex items-center justify-center flex-col gap-4">
       </div>
       <div className="text-gray-100 p-3 flex justify-center items-center flex-wrap" style={{backgroundColor:'#E32E27'}}>
           <div className="font-bold mr-4">🔥 Participe Agora!</div>
@@ -37,10 +48,10 @@ export default function Home() {
             <p onClick={() => setVisible(true)} className='ms-2 font-bold cursor-pointer uppercase'>Conheça mais sobre as nossas regras.</p>
         </div>
       </div>
-      <div className='flex flex-col lg:flex-row items-center justify-center p-3 py-10 lg:p-20 gap-20 lg:gap-8'  style={{backgroundColor:'#FDFBDD'}}>
+      <div className='flex flex-col xl:flex-row items-center justify-center p-3 py-10 md:p-20 gap-20 lg:gap-8'  style={{backgroundColor:'#FDFBDD'}}>
         <div className='flex flex-col flex-1 gap-10 w-full h-5/6 '>
-          <h1 className='text-2xl lg:text-5xl font-bold text-center' style={{color:'#587ebf'}}>Entenda nosso Concurso</h1>
-          <iframe className='rounded-2xl shadow-2xl h-285 lg:h-570'  src="https://www.youtube.com/embed/9bPGwCpVz_0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+          <h1 className='text-2xl md:text-5xl font-bold text-center' style={{color:'#587ebf'}}>Entenda nosso Concurso</h1>
+          <iframe className='rounded-2xl shadow-2xl h-285 md:h-570'  src="https://www.youtube.com/embed/9bPGwCpVz_0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
         <Forms/>
       </div>
@@ -49,10 +60,10 @@ export default function Home() {
           <div className="text-white font-bold text-3xl lg:text-5xl mb-3">Para validar sua participação no concurso</div>
           <div className="text-white text-2xl mb-5"> você também precisa seguir nossas redes sociais:</div>
           <div className='flex flex-col items-center lg:justify-center lg:flex-row gap-5 w-full m-auto'>
-            <Button label="Seguir" icon="pi pi-instagram" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
-            <Button label="Seguir" icon="pi pi-youtube" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
-            <Button label="Seguir" icon="pi pi-facebook" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
-            <Button label="Seguir" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap flex flex-row-reverse gap-2 "><FaTiktok size={18}/></Button>
+            <Button onClick={insta} label="Seguir" icon="pi pi-instagram" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button  onClick={youtube} label="Seguir" icon="pi pi-youtube" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button  onClick={facebook} label="Seguir" icon="pi pi-facebook" className=" font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap" />
+            <Button  onClick={tiktok} label="Seguir" className="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap flex flex-row-reverse gap-2 "><FaTiktok size={18}/></Button>
           </div>
       </div>
       <Footer/>

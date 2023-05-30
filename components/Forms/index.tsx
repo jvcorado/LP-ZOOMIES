@@ -78,7 +78,7 @@ export const Forms = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} method="post" className=" flex flex-col w-full lg:w-4/12 gap-3 p-10  shadow-2xl rounded-2xl bg-white">
+      <form onSubmit={handleSubmit} method="post" className=" flex flex-col w-full xl:w-4/12 gap-3 p-10  shadow-2xl rounded-2xl bg-white">
         <Image src={Logo} alt='Logo Zoomies' width={80} className="m-auto"/>
         <h1 className="text-center text-xl">Participe Agora!</h1>
         <p className="text-center">Já se inscreveu?</p>

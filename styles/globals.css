@@ -12,10 +12,32 @@ body{
 }
 
 
-.bg-image{
-  background-image: url(../public/2\ -\ Banner\ site_fundo.png);
+
+.bg-imageMobile{
+  background-image: url(../public/Banner_LP_Concurso_Ilustração_Vertical.jpg);
   background-position: center center;
-  background-size: cover;
-  height:100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 54vh;
 }
+
+
+
+
+@media (min-width:1000px) {
+  .bg-imageMobile{
+    display: none;
+  }
+
+  
+  .bg-image{
+    background-image: url(../public/Banner_LP_Concurso_Ilustração_Horizontal.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    display: block;
+  }
+}
+
 
